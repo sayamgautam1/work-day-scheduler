@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -21,6 +21,17 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.myclass {
+  padding-bottom: 2rem;
+}
+
+.clear {
+  text-align: center;
+  margin: 1em;
+  height: 1em;
+  font-size: 1.5em;
+}
+
 .description {
   white-space: pre-wrap;
 }
@@ -40,6 +51,9 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 0.7em;
 }
 
 .past {
