@@ -43,3 +43,10 @@ function showSavedSchedule() {
 }
 
 showSavedSchedule();
+let descriptionSavedEl = $(".description");
+// clear all the selction for next day, or redo for same day
+let clearEl = $("#clearbtn");
+clearEl.on("click", function () {
+  localStorage.clear();
+  descriptionSavedEl.val("");
+});
