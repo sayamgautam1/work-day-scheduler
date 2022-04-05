@@ -21,6 +21,7 @@ for (i = 0; i < hours.length; i++) {
     $(`#description${i}`).addClass("future");
   }
 }
+
 // to save a value
 saveBtnEl.on("click", function () {
   let time = $(this).siblings(".hour").text();
@@ -28,3 +29,17 @@ saveBtnEl.on("click", function () {
   // set the item into local storage
   localStorage.setItem(time, toDo);
 });
+
+// to have the value each time the page is loaded
+function showSavedSchedule() {
+  $(".hour").each(function () {
+    let currentHour = $(this).text();
+    let savedSchedule = localStorage.getItem(currentHour);
+
+    if (savedSchedule !== null) {
+      $(this).siblings(".description").text(savedSchedule);
+    }
+  });
+}
+
+showSavedSchedule();
